@@ -19,6 +19,10 @@ public class Order {
     @JoinColumn(name = "MEMBER_ID")
     private Member member;
 
+    @OneToOne
+    @JoinColumn(name = "DELIVERY_ID")
+    private Delivery delivery;
+
     // 가급적 단방향으로 해놓고 개발하다가 필요하면 양방향을 추가로 해라
 
     @OneToMany(mappedBy = "order")
